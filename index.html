@@ -14,11 +14,12 @@
 	<!-- JS | Plugin -->
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 	<!-- <link rel="stylesheet" href="./resources/plugin/jquery-1.12.3.min.js"> -->
+	<!-- JS | 제이쿼리 -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<!-- JS | Slick -->
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 	<!-- <link rel="stylesheet" href="./resources/plugin/slick/slick-theme.css">
 	<link rel="stylesheet" href="./resources/plugin/slick/slick.css">
 	<script type="text/javascript" src="./resources/plugin/slick/slick.min.js"></script> -->
@@ -46,8 +47,8 @@
 						</div>
 						<div class="nav__right">
 							<ul class="sns">
-								<li><a href="#"><img src="resources/images/icon_sns_instagram.png" alt=""></a></li>
-								<li><a href="#"><img src="resources/images/icon_sns_github.png" alt=""></a></li>
+								<li><a href="#none"><img src="resources/images/icon_sns_instagram.png" alt=""></a></li>
+								<li><a href="#none"><img src="resources/images/icon_sns_github.png" alt=""></a></li>
 							</ul>
 						</div>
 					</nav>
@@ -181,17 +182,17 @@
 				<section class="home__photo section" id="photo">
 					<div class="container">
 						<div class="columns columns--flex">
-							<div class="columns__item columns__item--360">
+							<div class="columns__item columns__item--txt">
 								<div class="title">
 									<h2>photo</h2>
-									<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+									<p>내가 좋은게 좋아.<br>좋아요를 눌러주세요</p>
 								</div>
 								<div class="sub-title">
 									<p>인생<br>
 										네컷</p>
 								</div>
 							</div>
-							<div class="columns__item">
+							<div class="columns__item columns__item--img">
 								<!-- plugin | slick -->
 								<div class="photo-slider"> 
 									<ul class="slider--outer slider">
@@ -259,21 +260,53 @@
 							<div class="tab">
 								<div class="tab__menu">
 									<ul class="flex">
-										<li><a href="#">#용감한</a></li>
-										<li><a href="#">#열정</a></li>
-										<li><a href="#">#도전</a></li>
+										<li class="tab__menu--item on"><a href="#tab--01" class="btn">#용감한</a></li>
+										<li class="tab__menu--item"><a href="#tab--02" class="btn">#열정</a></li>
+										<li class="tab__menu--item"><a href="#tab--03" class="btn">#도전</a></li>
 									</ul>
 								</div>
-								<div class="tab__content flex">
-									<div class="picture">
-										<img src="resources/images/img_review_01.png" alt="">
+								<div class="tab__content">
+									<div class="tab__content--item" id="tab--01">
+										<div class="inner flex">
+											<div class="picture">
+												<img src="resources/images/img_review_01.png" alt="">
+											</div>
+											<div class="info">
+												<h3>1Snap photos and share like</h3>
+												<strong>Sed ut <br>perspiciatis <br>unde omnis</strong>
+												<p>
+													Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+												</p>
+											</div>
+										</div>
 									</div>
-									<div class="info">
-										<h3>Snap photos and share like</h3>
-										<strong>Sed ut <br>perspiciatis <br>unde omnis</strong>
-										<p>
-											Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-										</p>
+									<div class="tab__content--item flex" id="tab--02">
+										<div class="inner flex">
+											<div class="picture">
+												<img src="resources/images/img_review_01.png" alt="">
+											</div>
+											<div class="info">
+												<h3>2Snap photos and share like</h3>
+												<strong>Sed ut <br>perspiciatis <br>unde omnis</strong>
+												<p>
+													Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+												</p>
+											</div>
+										</div class>
+									</div>
+									<div class="tab__content--item flex" id="tab--03">
+										<div class="inner flex">
+											<div class="picture">
+												<img src="resources/images/img_review_01.png" alt="">
+											</div>
+											<div class="info">
+												<h3>3Snap photos and share like</h3>
+												<strong>Sed ut <br>perspiciatis <br>unde omnis</strong>
+												<p>
+													Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -282,7 +315,7 @@
 				<section class="home__skills">
 					<div class="container container--full">
 						<div class="rolling">
-							<ul>
+							<ul class="flex">
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
@@ -291,6 +324,45 @@
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
@@ -308,18 +380,18 @@
 			</main>
 			<footer id="footer">
 				<div class="container">
-					<div class="columns columns__flex">
+					<div class="columns columns--flex">
 						<div class="columns__item">
 							<div class="info">
-								<a href="">wirrrro</a>
-								<p>© Photo, Inc. 2019. We love our users! © Photo, Inc. 2019. We love our users! © Photo, Inc. 2019. We love our users!</p>
-								<div class="copyright">© Photo, Inc. 2019. We love our users!</div>
+								<a href="#none" class="logo">wirrrro</a>
+								<p>위로하고, 위로받고, 위로가자</p>
+								<div class="copyright">Copyright © Min Young, Kim 2022</div>
 							</div>
 						</div>
-						<div class="columns__item">
-							<ul class="sns">
-								<li><a href="#"><img src="resources/images/icon_sns_instagram.png" alt=""></a></li>
-								<li><a href="#"><img src="resources/images/icon_sns_github.png" alt=""></a></li>
+						<div class="columns__item sns">
+							<ul class="flex">
+								<li><a href="#none"><img src="resources/images/icon_sns_instagram.png" alt=""></a></li>
+								<li><a href="#none"><img src="resources/images/icon_sns_github.png" alt=""></a></li>
 							</ul>
 						</div>
 					</div>

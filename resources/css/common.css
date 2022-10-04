@@ -6,7 +6,7 @@
 	--color-red:#FD6756;
 	--color-black:#111;
 	--color-gray:#7B7B7B;
-	--color-gray-light:#BBBBBB;
+	--color-gray--light:#BBBBBB;
 	--color-beige:#F5F1EF;
 	--color-white:#fefefe;
 	/* Font Size*/
@@ -73,6 +73,7 @@ ol,
 ul,
 li {
   list-style: none;
+	padding:0;
 }
 
 table {
