@@ -8,12 +8,12 @@ img {width:100%; display:block;}
 .columns--flex {display:flex;}
 .flex {display:flex;}
 .title h2 {font-family: var(--font-black); text-align:center; text-transform: uppercase; letter-spacing: 0.5rem; font-size: var(--font-large); }
-.title p {margin-top:5px; font-size: var(--font-small);}
+.title p {margin-top:5px; font-size: var(--font-small); font-family: var(--font-regular);}
 .section {position:relative; padding:10rem 0}
 
 .home {}
 /* +++++++++++++ header +++++++++++++  */
-#header {z-index:10; position:fixed; padding:40px 0; width:100%; background: var(--color-beige); border-bottom:var(--border-medium)}
+#header {z-index:11; position:fixed; padding:40px 0; width:100%; background: var(--color-beige); border-bottom:var(--border-medium)}
 #header nav {display:flex; justify-content: space-between; align-items: center;}
 #header nav .nav__left {display:flex;}
 #header nav .logo {font-size:3rem; font-family: var(--font-black);}
@@ -34,12 +34,12 @@ img {width:100%; display:block;}
 	top: 19px;
 	background: var(--color-black);} */
 
-#main {position:relative; top:150px}
+#main {position:relative; top:15rem}
 /* +++++++++++++ section | home__keyVisual +++++++++++++  */
 .home__keyVisual {padding:7em 0 10rem}
 .home__keyVisual .container {position:relative;}
 .home__keyVisual h1 {margin:0 0 2rem; font-size:2.8rem; font-family: 'Montserrat-Bold';}
-.home__keyVisual .image {border: var(--border-large)}
+.home__keyVisual .image {border: var(--border-large); height:60vh; width:100%; background: url('../../resources/images/keyvisual.png')no-repeat top/cover;}
 .home__keyVisual .image img {width:100%;}
 .home__keyVisual .circle-text {position:absolute; top:-10px; right:-250px; max-width:20rem; width:100%; height:auto; animation:spin 7s linear infinite;}
 .btn--gotoBot {position:absolute; bottom: -80px; left:50%; transform: translateX(-50%); max-width: 6.8rem; width:100%; height:auto; animation:gotoBotAni 2s linear infinite}
@@ -107,7 +107,7 @@ img {width:100%; display:block;}
 .home__dropdown.on {z-index:3;}
 .home__dropdown .dropdown-resume {opacity:0; height:0; transition: all 0.2s; background:var(--color-black);}
 .home__dropdown .dropdown-resume.show {opacity:1; height:auto; padding: 0 0 50px;}
-.home__dropdown .dropdown-resume .columns {padding:5rem; max-width: 1300px; width: 100%; margin: auto; background: var(--color-white);}
+.home__dropdown .dropdown-resume .columns {overflow: scroll; height: 500px;padding:5rem; max-width: 1300px; width: 100%; margin: auto; background: var(--color-white);}
 .home__dropdown .dropdown-resume .columns > div {flex: 1;}
 .home__dropdown .dropdown-resume .columns .picture {max-width: 312px; height:auto;}
 .home__dropdown .dropdown-resume .columns .picture img {border:var(--border-medium)}
@@ -135,8 +135,23 @@ img {width:100%; display:block;}
 .home__photo .slider__item .info .like img {width:28px}
 .home__photo .slider__item .info .like span {}
 .home__photo .slider__item .info .like i {}
+
+
 /* +++++++++++++ section | home__review +++++++++++++  */
+.home__review {background: var(--color-white);}
+.home__review .title {text-align:center;}
+.tab {margin-top:17rem;}
+.tab__menu ul {justify-content: center; border-bottom: var(--border-medium);}
+.tab__menu ul li {width:246px; padding:10px; text-align: center; border: var(--border-medium);border-bottom: none; font-size:var(--font-medium);}
+.tab__content {max-width: 1153px; width:100%; margin:10rem auto 0; justify-content: center;}
+.tab__content .info {margin-left:14rem; width:70vw;}
+.tab__content .info h3 {font-size:var(--font-large);}
+.tab__content .info strong {display:block; margin:5rem 0; font-size: var(--font-medium);}
+.tab__content .info p {font-size: var(--font-small);}
+
+
 /* +++++++++++++ section | home__skills +++++++++++++  */
+.home__skills {}
 
 
 
@@ -156,6 +171,8 @@ img {width:100%; display:block;}
 }
 @media screen and (max-width:768px){
 	html {font-size:8px;}
+	#header {padding:20px 0}
+	.btn--gotoBot {bottom:-57px}
 	.home__portfolio .list ul {flex-direction: column;}
 	.home__portfolio .list ul li:not(:first-child) {margin-top: 20px;}
 	.home__portfolio .list ul li .list__thumb {
