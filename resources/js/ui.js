@@ -4,7 +4,21 @@ window.onload = function () {
 	const titleChange = document.querySelector('.title--change');
 	const btnClose = document.querySelector('.btn--close');
 	const dropdown = document.querySelector('.home__dropdown');
+	const btnTop = document.querySelector('.btn--gotoTop');
+	const hamburger = document.querySelector('.hamburger');
+	const nav = document.querySelector('.nav');
+	const gnb = document.querySelector('.gnb');
+	const sns = document.querySelector('.nav__right');
 
+	// Mobile hamburger
+	hamburger.addEventListener('click',function(){
+		hamburger.classList.toggle('on');
+		nav.classList.toggle('on');
+		gnb.classList.toggle('on');
+		sns.classList.toggle('on');
+	})
+	
+	// * Resume
 	resume.addEventListener('click', function () {
 		dropdownResume.classList.toggle('show');
 		titleChange.classList.toggle('on');
@@ -28,7 +42,13 @@ window.onload = function () {
 
 	})
 
-	//Slick Slider
+	// * Scroll Top
+	btnTop.addEventListener('click',function(){
+		event.preventDefault();
+		window.scrollTo(0,0);
+	})
+
+	// * Slick Slider
 	$(document).ready(function () {
 		$('.slider').slick({
 			infinite: true,

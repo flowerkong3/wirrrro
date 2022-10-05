@@ -21,6 +21,7 @@
 	--font-black: 'Montserrat-Black', 'dotum','돋움',Arial, Helvetica, sans-serif;
 
 	--font-regular--kr: 'NotoSansKR-Light', 'dotum','돋움',Arial, Helvetica, sans-serif;
+	--font-bold--kr: 'NotoSansKR-Bold', 'dotum','돋움',Arial, Helvetica, sans-serif;
 	
 	/* stroke */
 	--stroke-large:5px;
@@ -59,6 +60,10 @@
 @font-face {
 	font-family: 'NotoSansKR-Medium';
 	src: url(../font/Noto_Sans_KR/NotoSansKR-Medium.otf);
+}
+@font-face {
+	font-family: 'NotoSansKR-Bold';
+	src: url(../font/Noto_Sans_KR/NotoSansKR-Bold.otf);
 }
 
 /* //++++++++++ Font ++++++++++ */

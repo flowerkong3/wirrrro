@@ -8,11 +8,20 @@ img {width:100%; display:block;}
 .columns--flex {display:flex;}
 .flex {display:flex;}
 .title h2 {font-family: var(--font-black); text-align:center; text-transform: uppercase; letter-spacing: 0.5rem; font-size: var(--font-large); }
-.title p {margin-top:5px; font-size: var(--font-small); font-family: var(--font-regular); font-family:'Montserrat-Bold','dotum','돋움',Arial, Helvetica, sans-serif;}
+.title p {
+	margin-top:5px; font-size: var(--font-small); 
+	font-family: var(--font-regular--kr); 
+	/* font-family:'Montserrat-Bold','dotum','돋움',Arial, Helvetica, sans-serif; */
+}
 .section {position:relative; padding:10rem 0}
 .logo {font-family: var(--font-black);}
+.btn--gotoTop {z-index:12; position:fixed; right:20px; bottom:20px; width:70px; height:70px;}
+.btn--gotoBot {position:absolute; bottom: -80px; left:50%; transform: translateX(-50%); margin-left:-20px; max-width: 6.8rem; width:100%; height:auto; animation:gotoBotAni 2s linear infinite}
 
-.home {}
+
+
+
+
 /* ! +++++++++++++ header +++++++++++++  */
 #header {z-index:11; position:fixed; padding:30px 0; width:100%; background: var(--color-beige); border-bottom:var(--border-medium)}
 #header nav {display:flex; justify-content: space-between; align-items: center;}
@@ -43,7 +52,7 @@ img {width:100%; display:block;}
 .home__keyVisual .image {border: var(--border-large); height:60vh; width:100%; background: url('../../resources/images/keyvisual.png')no-repeat top/cover;}
 .home__keyVisual .image img {width:100%;}
 .home__keyVisual .circle-text {position:absolute; top:-10px; right:-250px; max-width:20rem; width:100%; height:auto; animation:spin 7s linear infinite;}
-.btn--gotoBot {position:absolute; bottom: -80px; left:50%; transform: translateX(-50%); margin-left:-20px; max-width: 6.8rem; width:100%; height:auto; animation:gotoBotAni 2s linear infinite}
+
 /* +++++++++++++ section | home__bar-text +++++++++++++  */
 .home__bar-text {background: var(--color-black); color:var(--color-white);}
 .home__bar-text .rolling {padding:1rem 0; animation: rollingAni 10s linear infinite; transform: translateX(-50%);}
@@ -102,18 +111,26 @@ img {width:100%; display:block;}
 /*  ! +++++++++++++ section | home__click +++++++++++++  */
 .home__click {z-index:10; position:sticky; top:134px; left:0; padding:5rem 0; background:var(--color-black); color:var(--color-white); cursor: pointer;}
 .home__click::before {
-	z-index:1; content:''; position:absolute; bottom:-17px; left:50%; transform: translateX(-50%); background: url('../../resources/images/arrow_click.png')no-repeat top/cover; width:34px; height:39px;
+	z-index: 1;
+	content: '';
+	position: absolute;
+	bottom: -13px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: url(../../resources/images/arrow_click.png)no-repeat top/cover;
+	width: 29px;
+	height: 34px;
 }
 .home__click::after {
 	content: '';
 	position: absolute;
-	bottom: -24px;
+	bottom: -19px;
 	left: 50%;
-	margin-left: -33px;
+	margin-left: -28px;
 	transform: translateX(-50%);
 	background: var(--color-black);
-	width: 64px;
-	height: 64px;
+	width: 55px;
+	height: 55px;
 	border-radius: 15px;
 	transform: rotate(45deg);
 }
@@ -177,7 +194,7 @@ img {width:100%; display:block;}
 .tab__menu ul li.on {background: var(--color-main);}
 /* .tab__menu ul li:hover {background: var(--color-beige);} */
 .tab__menu ul li:last-child {border-right:var(--border-medium)}
-.tab__menu ul li a {display:block; padding:10px;}
+.tab__menu ul li a {display:block; padding:10px; font-family: var(--font-bold--kr);}
 .tab__content h3, 
 .tab__content strong, 
 .tab__content p {
@@ -223,7 +240,7 @@ img {width:100%; display:block;}
 	.home__bar-text .rolling ul li {font-size:9vw;}
 	.home__slogan .slogan ul li {font-size:3.5rem;}
 	.home__slogan .slogan ul li::after {top: 137%;}
-	.btn--gotoBot {bottom: -20%; max-width: 6.8rem;}
+	.btn--gotoBot {bottom: -15%; max-width: 6.8rem;}
 	/* .home__photo .slider {max-width: 480px;} */
 	.home__dropdown .dropdown-resume .columns .picture {max-width: 180px;}
 	.home__dropdown .dropdown-resume .columns .info {margin: 0 6rem;}
@@ -295,8 +312,79 @@ img {width:100%; display:block;}
 	#footer .info {text-align: center;}
 
 
+
+	/* 모바일 햄버거 메뉴 */
+	/* .container {padding:0}
+	#header {background: none; padding:0; cursor: pointer;}
+	#header nav {
+		position: relative;
+		height: 100vh;
+		width: 90%;
+		background: var(--color-beige);
+	}
+
+	#header nav .gnb {
+		display:none;
+		flex-direction: column;
+		position: absolute;
+		margin-left: 0;
+		left: 0;
+		top: 50px;
+	}
+	#header nav .gnb li:not(:first-child) {margin-top:11px;}
+	#header nav .gnb li a {
+		font-family: var(--font-regular);
+		font-size: 24px;
+		padding:0;
+	}
+	#header nav .nav__left {position:absolute; top:20px; left:30px}
+	#header nav .sns {display:none;} */
+	.hamburger {position: absolute; top:3px; right:0px; width:40px; height:20px; cursor:pointer;}
+	.hamburger span {position:absolute; top:0; left:0; width:100%; height:4px; background: var(--color-black); border-radius: 3px;}
+	.hamburger span:nth-child(1) {top: 0;}
+	.hamburger span:nth-child(2) {top: 50%;}
+	.hamburger span:nth-child(3) {top: 100%;}
+
+	#header nav {position:relative; width:100%; height:30px;}	
+	/* #header nav::before {content: ''; position:absolute; height:90vh; width:100%; top: 0; left: 0;  background: #fff;} */
+	#header nav .logo {position:absolute; top:0; left:0;}
+	#header nav .gnb {    
+		display:none;
+    margin-left: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+	}
+	#header nav .gnb li:not(:first-child) {margin-top:11px;}
+	#header nav .gnb li a {
+		font-family: var(--font-regular);
+		font-size: 24px;
+		padding:0;
+	}
+	#header nav .nav__right {
+		display:none;
+		position: absolute;
+    top: 300px;
+    left: -32px;
+	}
+	/* 모바일 햄버거 메뉴 클릭이벤트*/
+	.hamburger.on span:nth-child(1) {transform: rotate(45deg); top: 10px;}
+	.hamburger.on span:nth-child(2) {display:none;}
+	.hamburger.on span:nth-child(3) {transform: rotate(-45deg); top: 10px;}
+	#header nav.on {height:90vh; transition-duration: 0.3s;}
+	#header nav .gnb.on {display:block;}
+	#header nav .nav__right.on {display:block;}
+
+
+
+
 	/* * Custom Css */
 	.slick-prev:before, .slick-next:before {display:none;}
+
+
+
+
+
 
 
 }
