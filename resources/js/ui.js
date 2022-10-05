@@ -17,6 +17,20 @@ window.onload = function () {
 		gnb.classList.toggle('on');
 		sns.classList.toggle('on');
 	})
+
+	 // Scroll | Scroll Bottom
+  // $('.btn--gotoBot').click(function(e){
+  //   $.scrollTo(this.hash || 0, 800);
+  //   e.preventDefalut();
+  // });
+
+	// * scroll | button | bottom
+	$('.btn--gotoBot').click(function(){
+		event.preventDefault(); //기본 클릭 동작 방지하기
+		const mainOffset = $('#slogan').offset() //main의 위치값 변수에 담기
+		$('html, body').animate( { scrollTop:mainOffset.top - 80 },50 )
+	})
+
 	
 	// * Resume
 	resume.addEventListener('click', function () {
@@ -42,7 +56,7 @@ window.onload = function () {
 
 	})
 
-	// * Scroll Top
+	// * Scroll | Scroll Top
 	btnTop.addEventListener('click',function(){
 		event.preventDefault();
 		window.scrollTo(0,0);
