@@ -397,7 +397,7 @@ img {width:100%; display:block;}
 	.hamburger.on span:nth-child(1) {transform: rotate(45deg); top: 10px;}
 	.hamburger.on span:nth-child(2) {display:none;}
 	.hamburger.on span:nth-child(3) {transform: rotate(-45deg); top: 10px;}
-	#header nav.on {height:90vh; transition-duration: 0.3s;}
+	#header nav.on {height:60vh; transition-duration: 0.3s;}
 	#header nav .gnb.on {display:block;}
 	#header nav .nav__right.on {display:block;}
 
