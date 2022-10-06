@@ -24,11 +24,38 @@ window.onload = function () {
   //   e.preventDefalut();
   // });
 
-	// * scroll | button | bottom
+	// * Scroll | Show Hide | gotoTop 
+	$('.btn--gotoTop').hide()
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 200){
+			$('.btn--gotoTop').show()
+		}else {
+			$('.btn--gotoTop').hide();
+		}
+	})
+
+
+	// * Scroll | Scroll Bottom
 	$('.btn--gotoBot').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const mainOffset = $('#slogan').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:mainOffset.top - 80 },50 )
+	})
+
+	$('.portfolio').click(function(){
+		event.preventDefault(); //기본 클릭 동작 방지하기
+		const portfolioOffset = $('#portfolio').offset() //main의 위치값 변수에 담기
+		$('html, body').animate( { scrollTop:portfolioOffset.top - 80 },50 )
+	})
+	$('.photo').click(function(){
+		event.preventDefault(); //기본 클릭 동작 방지하기
+		const photoOffset = $('#photo').offset() //main의 위치값 변수에 담기
+		$('html, body').animate( { scrollTop:photoOffset.top - 80 },50 )
+	})
+	$('.review').click(function(){
+		event.preventDefault(); //기본 클릭 동작 방지하기
+		const reviewOffset = $('#review').offset() //main의 위치값 변수에 담기
+		$('html, body').animate( { scrollTop:reviewOffset.top - 80 },50 )
 	})
 
 	
@@ -105,7 +132,7 @@ window.onload = function () {
 	});
 
 
-	//home__review | Tab | 출처:https://abcdqbbq.tistory.com/88
+	// * Tab | home__review | 출처:https://abcdqbbq.tistory.com/88
 	const tabList = document.querySelectorAll('.tab__menu--item');
 	const contents = document.querySelectorAll('.tab__content--item');
 	let activeCont = ''; //현재 활성화 된 컨텐츠
