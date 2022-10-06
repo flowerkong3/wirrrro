@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="resources/css/ui.css">
 	
 	<!-- Plugin  -->
+	<!-- CSS | XEICON -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 	<!-- JS | Plugin -->
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 	<!-- <link rel="stylesheet" href="./resources/plugin/jquery-1.12.3.min.js"> -->
@@ -199,7 +201,7 @@
 							<div class="columns__item columns__item--txt">
 								<div class="title">
 									<h2>photo</h2>
-									<p>내가 좋은게 좋아.<br>좋아요를 눌러주세요</p>
+									<p>내가 좋은게 좋아.<br><b>좋아요</b>를 눌러주세요</p>
 								</div>
 								<div class="sub-title">
 									<p>인생<br>
@@ -213,10 +215,12 @@
 										<li class="slider__item">
 											<img src="resources/images/img_photo_01.png" alt="">
 											<div class="info">
+												
 												<div class="like">
-													<img src="resources/images/icon_heartRed.png" alt="">
-													<span>좋아요</span>
-													<i>1</i>
+													<i class="xi-heart-o heart"></i>
+													<!-- <img src="resources/images/icon_heartRed.png" alt=""> -->
+													<button id="countBtn1" class="count"><span>좋아요</span></button>
+													<span class="num" id="num1">0</span>
 												</div>
 												<h4>Sed ut perspiciatis</h4>
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
@@ -226,9 +230,10 @@
 											<img src="resources/images/img_photo_01.png" alt="">
 											<div class="info">
 												<div class="like">
-													<img src="resources/images/icon_heartRed.png" alt="">
-													<span>좋아요</span>
-													<i>1</i>
+													<i class="xi-heart-o heart"></i>
+													<!-- <img src="resources/images/icon_heartRed.png" alt=""> -->
+													<button id="countBtn2"><span>좋아요</span></button>
+													<span class="num" id="num2">0</span>
 												</div>
 												<h4>Sed ut perspiciatis</h4>
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
@@ -238,9 +243,10 @@
 											<img src="resources/images/img_photo_01.png" alt="">
 											<div class="info">
 												<div class="like">
-													<img src="resources/images/icon_heartRed.png" alt="">
-													<span>좋아요</span>
-													<i>1</i>
+													<i class="xi-heart-o heart"></i>
+													<!-- <img src="resources/images/icon_heartRed.png" alt=""> -->
+													<button id="countBtn3"><span>좋아요</span></button>
+													<span class="num" id="num3">0</span>
 												</div>
 												<h4>Sed ut perspiciatis</h4>
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
@@ -250,9 +256,11 @@
 											<img src="resources/images/img_photo_01.png" alt="">
 											<div class="info">
 												<div class="like">
-													<img src="resources/images/icon_heartRed.png" alt="">
-													<span>좋아요</span>
-													<i>1</i>
+													<!-- <i class="xi-heart"></i> -->
+													<i class="xi-heart-o heart"></i>
+													<!-- <img src="resources/images/icon_heartRed.png" alt=""> -->
+													<button id="countBtn4"><span>좋아요</span></button>
+													<span class="num" id="num4">0</span>
 												</div>
 												<h4>Sed ut perspiciatis</h4>
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
@@ -283,7 +291,8 @@
 									<div class="tab__content--item" id="tab--01">
 										<div class="inner flex">
 											<div class="picture">
-												<img src="resources/images/img_review_01.png" alt="">
+												😀
+												<!-- <img src="resources/images/img_review_01.png" alt=""> -->
 											</div>
 											<div class="info">
 												<h3>도전하는 사람입니다</h3>
@@ -297,7 +306,8 @@
 									<div class="tab__content--item flex" id="tab--02">
 										<div class="inner flex">
 											<div class="picture">
-												<img src="resources/images/img_review_02.png" alt="">
+												💖
+												<!-- <img src="resources/images/img_review_02.png" alt=""> -->
 											</div>
 											<div class="info">
 												<h3>차분한 열정가입니다</h3>
@@ -312,7 +322,8 @@
 									<div class="tab__content--item flex" id="tab--03">
 										<div class="inner flex">
 											<div class="picture">
-												<img src="resources/images/img_review_03.png" alt="">
+												👍
+												<!-- <img src="resources/images/img_review_03.png" alt=""> -->
 											</div>
 											<div class="info">
 												<h3>책임감이 뛰어난 사람입니다</h3>
@@ -337,57 +348,48 @@
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_xd.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_pr.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_xd.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_pr.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_xd.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_pr.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_xd.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_pr.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_xd.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_pr.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
 								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_html.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_css.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_js.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ps.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_ai.png" alt=""></li>
-								<li><img src="resources/images/icon_skills_id.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_xd.png" alt=""></li>
+								<li><img src="resources/images/icon_skills_pr.png" alt=""></li>
 							</ul>
 						</div>
 					</div>

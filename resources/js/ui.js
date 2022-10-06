@@ -9,6 +9,11 @@ window.onload = function () {
 	const nav = document.querySelector('.nav');
 	const gnb = document.querySelector('.gnb');
 	const sns = document.querySelector('.nav__right');
+	const likeHeart = document.querySelector('.like i');
+	const likeNumber = document.querySelector('.num')
+
+	
+
 
 	// Mobile hamburger
 	hamburger.addEventListener('click',function(){
@@ -41,7 +46,7 @@ window.onload = function () {
 		const mainOffset = $('#slogan').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:mainOffset.top - 80 },50 )
 	})
-
+	// * Scroll | Scroll to location
 	$('.portfolio').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const portfolioOffset = $('#portfolio').offset() //main의 위치값 변수에 담기
@@ -89,13 +94,46 @@ window.onload = function () {
 		window.scrollTo(0,0);
 	})
 
+	// * Photo | Like Heart Plus
+	var count1 = 0;
+	var count2 = 0;
+	var count3 = 0;
+	var count4 = 0;
+	$('#countBtn1').click(function(){
+		count1 = count1 + 1;
+		document.querySelector("#num1").innerText = count1;
+	})
+	$('#countBtn2').click(function(){
+		count2 = count2 + 1;
+		document.querySelector("#num2").innerText = count2;
+	})
+	$('#countBtn3').click(function(){
+		count3 = count3 + 1;
+		document.querySelector("#num3").innerText = count3;
+	})
+	$('#countBtn4').click(function(){
+		count4 = count4 + 1;
+		document.querySelector("#num4").innerText = count4;
+	})
+	// * Photo | 좋아요 누르면 하트 컬러 변경
+	$('.like button').click(function(){
+		var $this = $('.heart');
+		// $('.heart').removeClass('on');
+		$($this).addClass('on');
+	})
+
+	// * Photo | Like Heart Event
+	$('.like i').click(function(){
+		$(this).toggleClass('on');
+	})
+
 	// * Slick Slider
 	$(document).ready(function () {
 		$('.slider').slick({
 			infinite: true,
 			slidesToShow: 1.5,
 			slidesToScroll: 1,
-			autoplay: true,
+			// autoplay: true,
 			autoplaySpeed: 3000,
 			responsive: [
 				{
