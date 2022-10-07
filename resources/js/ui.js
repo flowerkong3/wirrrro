@@ -11,6 +11,17 @@ window.onload = function () {
 	const sns = document.querySelector('.nav__right');
 	const likeHeart = document.querySelector('.like i');
 	const likeNumber = document.querySelector('.num')
+	const clickSection = document.querySelector('.home__click');
+	const clickSectionHeight = clickSection.scrollHeight; //현재 요소의 높이
+
+	// Scroll | Change Click Color
+	window.addEventListener('scroll',function(){
+		if(window.scrollY > 1700) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 DOM의 높이를 넘어설 경우- window.scrollY
+			clickSection.style.backgroundColor = '#111'; //해당 요소의 스타일 속성을 변경시킨다. 
+		}else {
+			clickSection.style.backgroundColor = 'var(--color-main)';
+		}
+	})
 
 	
 
