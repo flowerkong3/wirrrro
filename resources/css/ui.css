@@ -187,8 +187,8 @@ img {width:100%; display:block;}
 .home__click .title--change::after {display:none; position:absolute; content:'- close -'; width:100%; height:100%; left:0; top:0;}
 .home__click .title--change.on::before {display:none;}
 .home__click .title--change.on::after {display:block;}
-.home__dropdown {z-index:1; position: sticky; top:238px; background: var(--color-black);}
-.home__dropdown.on {z-index:3;}
+.home__dropdown {z-index:1; position: sticky; top:238px; padding:0 30px 0; background: var(--color-black);}
+.home__dropdown.on {z-index:3; padding:20px 30px 0}
 .home__dropdown .dropdown-resume {opacity:0; height:0; transition: all 0.2s; background:var(--color-black);}
 .home__dropdown .dropdown-resume.show {opacity:1; height:auto; padding: 0 0 50px;}
 .home__dropdown .dropdown-resume .columns {overflow: scroll; height: 500px;padding:5rem; max-width: 1300px; width: 100%; margin: auto; background: var(--color-white);}
