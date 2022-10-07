@@ -217,7 +217,8 @@ img {width:100%; display:block;}
 .home__photo .slider {padding:0;}
 .home__photo .slider__item {margin:0 10px; border: var(--border-medium);}
 .home__photo .slider__item .info {padding:20px; background: var(--color-white); font-size:var(--font-small);}
-.home__photo .slider__item .info h4 {font-size:var(--font-medium);}
+.home__photo .slider__item .info h4 {font-size:var(--font-small);}
+.home__photo .slider__item .info p {font-family: var(--font-regular--kr); font-size: var(--font-x-small);}
 .home__photo .slider__item .info .like {display:flex; align-items: center; font-size:var(--font-x-small);}
 /* .home__photo .slider__item .info .like img {width: 20px; margin-right: 5px; margin-top: -2px;} */
 .home__photo .slider__item .info .like i {position:relative; width:20px; height:20px; }
