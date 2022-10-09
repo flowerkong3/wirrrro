@@ -1,8 +1,42 @@
 @charset "utf-8";
 
 html {font-size: 10px; }
-body {}
+/* body {
+  cursor: url(../../resources/images/icon_heartRed.png), auto;
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  text-align:center;
+
+} */
+
+body {
+	overflow-y: scroll; cursor: url(../../resources/images/icon_heartRed02.png) 0 0,auto;
+}
+/* body::-webkit-scrollbar {
+	background: var(--color-beige);
+	width: 20px;
+}
+body::-webkit-scrollbar-thumb {
+	background: var(--color-red);
+	border-radius: 150px;
+} */
+/* body::-webkit-scrollbar-button:vertical:increment {
+	width:20px; height:20px;
+	background: #ccc;
+}
+body::-webkit-scrollbar-button:vertical:decrement {
+	width:20px; height:20px;
+	background: #ccc;
+} */
 img {width:100%; display:block;}
+.cursor-item {
+	z-index:11;
+	position:absolute; top:0; left:0;
+	width:100px; height:100px;
+	background-color: blueviolet; cursor: none;
+}
 .container {padding:0 20px; max-width: 1430px; width: 100%; margin: auto;}
 .container--full {max-width: auto; width:100%;}
 .columns--flex {display:flex;}
@@ -17,6 +51,7 @@ img {width:100%; display:block;}
 .logo {font-family: var(--font-black);}
 .btn--gotoTop {z-index:12; position:fixed; right:20px; bottom:20px; width:70px; height:70px;}
 .btn--gotoBot {position:absolute; bottom: -80px; left:50%; transform: translateX(-50%); margin-left:-20px; max-width: 6.8rem; width:100%; height:auto; animation:gotoBotAni 2s linear infinite}
+
 /* 모바일 햄버거 메뉴 */
 .hamburger {display:none;}
 /* Heart Drop */
@@ -79,6 +114,18 @@ img {width:100%; display:block;}
 /* .home__keyVisual .image::after {content: '';position:absolute; top:63.2%; right:0; width:100%; height:100%; background-image: url(../../resources/images/icon_heartCheckGreen.png); background-repeat: no-repeat; } */
 /* .home__keyVisual .image img {width:100%;} */
 .home__keyVisual .circle-text {position:absolute; top:-10px; right:-250px; max-width:20rem; width:100%; height:auto; animation:spin 7s linear infinite;}
+.home .key-heart {
+	width: 115px;
+	position: absolute;
+	left: 278px;
+	top: 32.5%;
+	animation: keyHeart 1s ease infinite;
+}
+@keyframes keyHeart {
+	0% {transform: scale(1.8);}
+	50% {transform: scale(1.4);}
+	100% {transform: scale(1.4);}
+}
 
 /* +++++++++++++ section | home__bar-text +++++++++++++  */
 .home__bar-text {background: var(--color-black); color:var(--color-white);}
@@ -105,7 +152,6 @@ img {width:100%; display:block;}
 
 /*  ! +++++++++++++ section | home__slogan +++++++++++++  */
 .home__slogan {padding:7rem 0; background:var(--color-beige);}
-.home__slogan .slogan {}
 .home__slogan .slogan ul {position:relative; display:flex; justify-content: center; width:100%;}
 .home__slogan .slogan ul li {z-index:1; position:relative; margin:0 5rem; font-weight:bold; letter-spacing: -1px; font-size:5.5rem; font-family: 'Montserrat-Black';}
 .home__slogan .slogan ul li::before {content:'';position:absolute; top:50%; transform: translateY(-50%); right:-5rem; width:5px; height:40px; background:#000;}
@@ -130,8 +176,6 @@ img {width:100%; display:block;}
 	100% {transform: translateY(100%);}
 } */
 .home__portfolio .title {text-align:center;}
-.home__portfolio .title h2 {}
-.home__portfolio .title p {}
 .home__portfolio .list {margin-top:8rem;}
 .home__portfolio .list ul {}
 .home__portfolio .list ul li {flex:1; margin:0 1rem; background: var(--color-main);}
@@ -191,7 +235,27 @@ img {width:100%; display:block;}
 .home__dropdown.on {z-index:3; padding:20px 30px 0}
 .home__dropdown .dropdown-resume {opacity:0; height:0; transition: all 0.2s; background:var(--color-black);}
 .home__dropdown .dropdown-resume.show {opacity:1; height:auto; padding: 0 0 50px;}
-.home__dropdown .dropdown-resume .columns {overflow: scroll; height: 500px;padding:5rem; max-width: 1300px; width: 100%; margin: auto; background: var(--color-white);}
+.home__dropdown .dropdown-resume .columns {overflow-y: scroll; height: 500px;padding:5rem; max-width: 1300px; width: 100%; margin: auto; background: var(--color-white);}
+/* ScrollBar Custom */
+.home__dropdown .dropdown-resume .columns::-webkit-scrollbar {
+	background: #ccc;
+	width:20px;
+}
+.home__dropdown .dropdown-resume .columns::-webkit-scrollbar-thumb {
+	background: #333;
+	width:30px;
+	border-radius: 50px;
+}
+/* .home__dropdown .dropdown-resume .columns::-webkit-scrollbar-button:vertical:increment {
+	width:20px; height:20px;
+	background: var(--color-red);
+}
+.home__dropdown .dropdown-resume .columns::-webkit-scrollbar-button:vertical:decrement {
+	width:20px; height:20px;
+	background: var(--color-red);
+} */
+
+
 .home__dropdown .dropdown-resume .columns > div {flex: 1;}
 .home__dropdown .dropdown-resume .columns .picture {max-width: 312px; height:auto;}
 .home__dropdown .dropdown-resume .columns .picture img {border:var(--border-medium)}
@@ -212,7 +276,7 @@ img {width:100%; display:block;}
 .home__photo .columns--flex {justify-content: space-between;}
 .home__photo .columns__item--txt {padding-left:20px; margin-right:5rem; width: 360px; display: flex; flex-direction: column; justify-content: inherit;}
 .home__photo .columns__item--img {width: 46vw;}
-.home__photo .photo-slider {position:relative; right:50px;}
+.home__photo .photo-slider {position:relative; right:50px; cursor: grab;}
 /* .home__photo .slider {max-width:780px; width:100%;} */
 .home__photo .slider {padding:0;}
 .home__photo .slider__item {margin:0 10px; border: var(--border-medium);}
@@ -291,6 +355,12 @@ img {width:100%; display:block;}
 #footer .sns a {display:block; width:25px; height:25px;}
 
 
+/* @media screen and (max-width:1280px) {
+	.home .key-heart {top: 21.5%;}
+}
+@media screen and (max-width:1024px) {
+	.home .key-heart {top: 11.5%;}
+} */
 
 @media screen and (max-width:1040px){
 	html {font-size:9px;}
@@ -310,7 +380,8 @@ img {width:100%; display:block;}
 	#header {padding:20px 0}
 	.btn--gotoBot {bottom:-57px}
 
-	.home__keyVisual .image {background-position-x: -190px;}
+	.home__keyVisual .image {background-position-x: -190px; height:400px;}
+	.home .key-heart {left:90px; top: 16%;}
 
 	.home__slogan .slogan ul li::before {width:2px;}
 	.home__portfolio .list {margin-top:5rem;}

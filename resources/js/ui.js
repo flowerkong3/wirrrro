@@ -14,6 +14,15 @@ window.onload = function () {
 	const clickSection = document.querySelector('.home__click');
 	const clickSectionHeight = clickSection.scrollHeight; //현재 요소의 높이
 
+	// Cursor Custom
+	// const cousor = document.querySelector('.cursor-item');
+
+  //   const animateCursor = (e) => {
+  //       cousor.style.left = `${e.pageX}px`;
+  //       cousor.style.top = `${e.pageY}px`;
+  //   }
+  //   window.addEventListener('mousemove', animateCursor);
+
 	// Scroll | Change Click Color
 	window.addEventListener('scroll',function(){
 		if(window.scrollY > 1800) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 DOM의 높이를 넘어설 경우- window.scrollY
@@ -80,7 +89,7 @@ window.onload = function () {
 	})
 
 	
-	// * Resume
+	// * Click Show Hide | Resume
 	resume.addEventListener('click', function () {
 		dropdownResume.classList.toggle('show');
 		titleChange.classList.toggle('on');
@@ -110,7 +119,7 @@ window.onload = function () {
 		window.scrollTo(0,0);
 	})
 
-	// * Photo | Like Heart Plus
+	// * Photo | count | Like Heart Plus 
 	var count1 = 0;
 	var count2 = 0;
 	var count3 = 0;
@@ -210,5 +219,11 @@ window.onload = function () {
 		});
 	}
 
+
+	// function mouseFunc(e){
+	// 	body.innerHTML = 'x: ' + e.clientX + 'y:' + e.clientY;
+	// }
+
+	// cursorItem.style.transform = "translate( "+e.clientX + "px," + c.clientY + "px)"
 
 }
