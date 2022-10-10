@@ -16,7 +16,7 @@
 
 .info {padding: 3rem 0 7rem;}
 .info li {padding: 20px 0; border-bottom: 3px solid #111; }
-.info li:nth-child(1) {font-size:7.2rem; font-family: var(--font-bold);}
+.info li:nth-child(1) {font-size:6.2rem; font-family: var(--font-bold);}
 .info li:nth-child(2) {border-bottom: 1px solid #111; font-family: var(--font-bold--kr); font-size:var(--font-medium);}
 .info li:nth-child(3) {line-height:2; font-size:var(--font-small);}
 .info li:nth-child(4) {font-size:var(--font-small); border-bottom: 0;}
@@ -47,4 +47,6 @@
 	background-position-y: 48%;
 }
 
-
+@media screen and (max-width:768px) {
+	.info li:nth-child(1) {font-size:32px}
+}
