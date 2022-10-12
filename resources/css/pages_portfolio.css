@@ -9,7 +9,7 @@
 .keyVisual .container {position:relative; width:100%; max-width: 100%; padding: 0;}
 .keyVisual .image {
 	position:relative;
-	height: 40vh;
+	height: 60vh;
 	width: 100%;
 	/* background: url(../../resources/images/img_portfolio_01.png)no-repeat top/cover;  */
 }
@@ -27,22 +27,16 @@
 
 .portfolio__ooc .keyVisual .image {
 	position:relative;
-	height: 40vh;
-	width: 100%;
 	background: url(../../resources/images/img_portfolio_01.png)no-repeat top/cover; 
 	background-position-y: 34%;
 }
 .portfolio__inni .keyVisual .image {
 	position:relative;
-	height: 40vh;
-	width: 100%;
 	background: url(../../resources/images/img_portfolio_02_1.png)no-repeat top/cover; 
 	background-position-y: 34%;
 }
 .portfolio__yourname .keyVisual .image {
 	position:relative;
-	height: 40vh;
-	width: 100%;
 	background: url(../../resources/images/img_portfolio_03_1.png)no-repeat top; 
 	background-position-y: 48%;
 }

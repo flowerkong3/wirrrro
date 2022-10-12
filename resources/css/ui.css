@@ -31,6 +31,7 @@ body::-webkit-scrollbar-button:vertical:decrement {
 	background: #ccc;
 } */
 img {width:100%; display:block;}
+.blind {position:absolute; left:-9999px; top:-9999px;}
 .cursor-item {
 	z-index:11;
 	position:absolute; top:0; left:0;
@@ -120,7 +121,7 @@ img {width:100%; display:block;}
 	width: 115px;
 	position: absolute;
 	left: 278px;
-	top: 25.5%;
+	top: 24.5%;
 	animation: keyHeart 1s ease infinite;
 }
 @keyframes keyHeart {
