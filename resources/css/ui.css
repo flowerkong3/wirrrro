@@ -121,7 +121,7 @@ img {width:100%; display:block;}
 	width: 115px;
 	position: absolute;
 	left: 278px;
-	top: 24.5%;
+	top: 26%;
 	animation: keyHeart 1s ease infinite;
 }
 @keyframes keyHeart {
