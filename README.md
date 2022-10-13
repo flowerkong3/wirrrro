@@ -1,2 +1,6 @@
-# wirrrro
-포트폴리오 버전2 | 위로
+#  PortfolioV2 | Wirrrro
+
+WP_Update1.0
+- [x]  home | rolling bar → 스크롤 이벤트 (스크롤 내리면 - text fill color )
+- [x]  home | click → 스크롤 이벤트 (스크롤 내리면 배경색 left: 0 —>100% )
+- [x]  home | keyVisual→ 스크롤 이벤트 (스크롤 내리면 heart 애니메이션 작동 )
