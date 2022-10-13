@@ -13,6 +13,9 @@ window.onload = function () {
 	const likeNumber = document.querySelector('.num')
 	const clickSection = document.querySelector('.home__click');
 	const clickSectionHeight = clickSection.scrollHeight; //현재 요소의 높이
+	const rollingBar = document.querySelector('.home__bar-text');
+	const rollingText = document.querySelectorAll('.home__bar-text li')
+	const keyHeart = document.querySelector('.home .key-heart');
 
 	// Cursor Custom
 	// const cousor = document.querySelector('.cursor-item');
@@ -23,21 +26,63 @@ window.onload = function () {
   //   }
   //   window.addEventListener('mousemove', animateCursor);
 
-	// Scroll | Change Click Color
+	// *Mouseover Event
+	// - Click | Change Color
+	// clickSection.addEventListener('mouseover',function(){
+	// 	clickSection.style.backgroundColor = '#61FF00';
+	// })
+	// clickSection.addEventListener('mouseout',function(){
+	// 	clickSection.style.backgroundColor = 'var(--color-main)';
+	// })
+	// *Scroll Down Event 
 	window.addEventListener('scroll',function(){
-		if(window.scrollY > 1800) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 DOM의 높이를 넘어설 경우- window.scrollY
-			clickSection.style.backgroundColor = '#111'; //해당 요소의 스타일 속성을 변경시킨다. 
+		// - Click | Change Color
+		if(window.scrollY > 1700) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 DOM의 높이를 넘어설 경우- window.scrollY
+			clickSection.classList.add('active'); 
 		}else {
-			clickSection.style.backgroundColor = 'var(--color-main)';
+			clickSection.classList.remove('active');
 		}
+
+		// - Rollin Bar Text - fill
+		if(window.scrollY > 200) {
+			rollingText[0].classList.add('fill')
+		}else {
+			rollingText[0].classList.remove('fill')
+		};
+		if(window.scrollY > 400) {
+			rollingText[1].classList.add('fill')
+		}else {
+			rollingText[1].classList.remove('fill')
+		};
+		if(window.scrollY > 600) {
+			rollingText[2].classList.add('fill')
+		}else {
+			rollingText[2].classList.remove('fill')
+		};
+				// for(i=0; i<rollingText.length; i++){
+		// 	if(window.scrollY > 400) {
+		// 		rollingText[i].classList.add('fill')
+		// 	}else {
+		// 		rollingText[i].classList.remove('fill')
+		// 	};
+		// }
+
+		// keyVisual | Heart animation 
+		if(window.scrollY > 30) {
+			keyHeart.style.width = '115px';
+			keyHeart.style.display = 'block';
+		}else {
+			keyHeart.style.width = '0';
+			keyHeart.style.display = 'none';
+		}
+
+
+
 	})
 
-	clickSection.addEventListener('mouseover',function(){
-		clickSection.style.backgroundColor = '#61FF00';
-	})
-	clickSection.addEventListener('mouseout',function(){
-		clickSection.style.backgroundColor = 'var(--color-main)';
-	})
+
+
+
 
 
 	// Mobile hamburger
@@ -54,7 +99,13 @@ window.onload = function () {
   //   e.preventDefalut();
   // });
 
-	// * Scroll | Show Hide | gotoTop 
+	// * Scroll | gotoTop | Scroll Top
+	btnTop.addEventListener('click',function(){
+		event.preventDefault();
+		window.scrollTo(0,0);
+	})
+
+	// * Scroll | gotoTop | show hide
 	$('.btn--gotoTop').hide()
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 200){
@@ -65,23 +116,26 @@ window.onload = function () {
 	})
 
 
-	// * Scroll | Scroll Bottom
+	// * Scroll to location
+	//  gotoBottm
 	$('.btn--gotoBot').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const mainOffset = $('#slogan').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:mainOffset.top - 80 },50 )
 	})
-	// * Scroll | Scroll to location
+	// Scroll to location | portfolio
 	$('.portfolio').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const portfolioOffset = $('#portfolio').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:portfolioOffset.top - 80 },50 )
 	})
+	// Scroll to location | photo
 	$('.photo').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const photoOffset = $('#photo').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:photoOffset.top - 80 },50 )
 	})
+	// Scroll to location | review
 	$('.review').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const reviewOffset = $('#review').offset() //main의 위치값 변수에 담기
@@ -89,7 +143,8 @@ window.onload = function () {
 	})
 
 	
-	// * Click Show Hide | Resume
+	// * Click Event 
+	// DropDownResume | Show Hide  
 	resume.addEventListener('click', function () {
 		dropdownResume.classList.toggle('show');
 		titleChange.classList.toggle('on');
@@ -113,13 +168,9 @@ window.onload = function () {
 
 	})
 
-	// * Scroll | Scroll Top
-	btnTop.addEventListener('click',function(){
-		event.preventDefault();
-		window.scrollTo(0,0);
-	})
 
-	// * Photo | count | Like Heart Plus 
+	// * Count Event
+	// Photo | Like Heart Plus 
 	var count1 = 0;
 	var count2 = 0;
 	var count3 = 0;
@@ -152,6 +203,8 @@ window.onload = function () {
 		$(this).toggleClass('on');
 	})
 
+
+	
 	// * Slick Slider
 	$(document).ready(function () {
 		$('.slider').slick({
@@ -195,7 +248,8 @@ window.onload = function () {
 	});
 
 
-	// * Tab | home__review | 출처:https://abcdqbbq.tistory.com/88
+	// * Tab Event
+	// home__review | 출처:https://abcdqbbq.tistory.com/88
 	const tabList = document.querySelectorAll('.tab__menu--item');
 	const contents = document.querySelectorAll('.tab__content--item');
 	let activeCont = ''; //현재 활성화 된 컨텐츠
