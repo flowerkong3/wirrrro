@@ -47,8 +47,8 @@
 .heart-drop span:nth-child(4) {animation:heartDrop 6s 3s linear infinite; left:70%; top: -5%}
 .heart-drop span:nth-child(5) {animation:heartDrop 6s 1s linear infinite; left:90%; top: -8%;}
 @keyframes heartDrop {
-	0% {transform: translateY(-10%);}
-	100% {transform: translateY(5000%);}
+	0% {transform: translateY(5000%);}
+	100% {transform: translateY(-10%);}
 }
 
 

@@ -16,6 +16,7 @@ window.onload = function () {
 	const rollingBar = document.querySelector('.home__bar-text');
 	const rollingText = document.querySelectorAll('.home__bar-text li')
 	const keyHeart = document.querySelector('.home .key-heart');
+	const card = document.querySelector('.card');
 
 	// Cursor Custom
 	// const cousor = document.querySelector('.cursor-item');
@@ -34,6 +35,14 @@ window.onload = function () {
 	// clickSection.addEventListener('mouseout',function(){
 	// 	clickSection.style.backgroundColor = 'var(--color-main)';
 	// })
+
+		card.addEventListener('mouseover', function () {
+			keyHeart.classList.add('show');
+		})
+		card.addEventListener('mouseout', function () {
+			keyHeart.classList.remove('show');
+		})
+	
 	// *Scroll Down Event 
 	window.addEventListener('scroll',function(){
 		// - Click | Change Color
@@ -41,6 +50,13 @@ window.onload = function () {
 			clickSection.classList.add('active'); 
 		}else {
 			clickSection.classList.remove('active');
+		}
+
+		// keyVisual | Run
+		if(window.scrollY > 100) {
+			run.classList.add('active')
+		}else {
+			run.classList.remove('active')
 		}
 
 		// - Rollin Bar Text - fill
@@ -54,7 +70,7 @@ window.onload = function () {
 		}else {
 			rollingText[1].classList.remove('fill')
 		};
-		if(window.scrollY > 500) {
+		if(window.scrollY > 800) {
 			rollingText[2].classList.add('fill')
 		}else {
 			rollingText[2].classList.remove('fill')
@@ -68,13 +84,13 @@ window.onload = function () {
 		// }
 
 		// keyVisual | Heart animation 
-		if(window.scrollY > 30) {
-			keyHeart.style.width = '115px';
-			keyHeart.style.display = 'block';
-		}else {
-			keyHeart.style.width = '0';
-			keyHeart.style.display = 'none';
-		}
+		// if(window.scrollY > 30) {
+		// 	keyHeart.style.width = '115px';
+		// 	keyHeart.style.display = 'block';
+		// }else {
+		// 	keyHeart.style.width = '0';
+		// 	keyHeart.style.display = 'none';
+		// }
 
 
 
