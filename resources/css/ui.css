@@ -157,7 +157,7 @@ img {width:100%; display:block;}
 /* .home__bar-text li:nth-child(1) {padding-left:30%; transition: all 0.3s;}
 .home__bar-text li.fill:nth-child(1) {padding-left: 0;} */
 
-/* .rolling {padding:1rem 0; transform: translateX(-50%); animation: rollingAni 10s linear infinite;} */
+.rollingAni {padding:1rem 0; transform: translateX(-50%); animation: rollingAni 10s linear infinite;}
 
 /* * Animatiton */
 @keyframes spin {
