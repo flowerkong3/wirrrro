@@ -44,7 +44,7 @@ window.onload = function () {
 		}
 
 		// - Rollin Bar Text - fill
-		if(window.scrollY > 200) {
+		if(window.scrollY > 300) {
 			rollingText[0].classList.add('fill')
 		}else {
 			rollingText[0].classList.remove('fill')
@@ -54,7 +54,7 @@ window.onload = function () {
 		}else {
 			rollingText[1].classList.remove('fill')
 		};
-		if(window.scrollY > 600) {
+		if(window.scrollY > 500) {
 			rollingText[2].classList.add('fill')
 		}else {
 			rollingText[2].classList.remove('fill')
