@@ -119,13 +119,13 @@ h1 .title-deco::before {
 	/* border: 1px solid red; */
 	position: absolute;
 	z-index: 10;
-	right: -37px;
+	right: -17px;
 	top: 93%;
 	transform: rotate(45deg);
 	transition: all 0.3s;
 }
 .deco--run.active {
-	top:80%;
+	top:60%;
 	transform: rotate(90deg);
 } 
 
@@ -193,7 +193,7 @@ h1 .title-deco::before {
 	background-repeat: no-repeat; 
 } */
 .home .key-heart {
-	display:block;
+	display:none;
 	width: 115px;
 	position: absolute;
 	left: 278px;
@@ -338,7 +338,7 @@ h1 .title-deco::before {
 	transform: rotate(45deg);
 } */
 .home__click .title {position:relative;}
-.home__click .title--change {animation: txtChangeAni 0.5s ease infinite; opacity:0.5;}
+.home__click .title--change {animation: txtChangeAni 0.5s ease infinite; opacity:0.3;}
 @keyframes txtChangeAni {
 	50% {opacity:1;}
 }
@@ -480,20 +480,22 @@ h1 .title-deco::before {
 
 @media screen and (max-width:1280px) {
 	.home__photo .columns__item--img {width:46vw}
+	.deco--run {right:5px;}
 }
 
 @media screen and (max-width:1040px){
 	html {font-size:9px;}
 	/* .home__keyVisual {padding:3vw 0 12vw} */
 	.btn--gotoBot {bottom: -15%; max-width: 6.8rem;}
-	.home__bar-text .rolling ul li {font-size:9vw;}
+	.home__bar-text .rolling ul li {font-size:10vw; letter-spacing: -1px;}
 	.home__slogan .slogan ul li {font-size:3.5rem;}
 	.home__slogan .slogan ul li::after {top: 137%;}
 	/* .home__photo .slider {max-width: 480px;} */
 	.home__dropdown .dropdown-resume .columns .picture {max-width: 180px;}
 	.home__dropdown .dropdown-resume .columns .info {margin: 0 6rem;}
 	.home__photo .photo-slider {border: none;}
-	.home__photo .slider__item {margin:0}
+	/* .home__photo .slider__item {margin:0} */
+	
 	
 
 }
@@ -634,6 +636,13 @@ h1 .title-deco::before {
 		width:89px;
 }
 	.btn--gotoBot {bottom: -50px; left: 80%; max-width: 54px;}
+
+	.title p {font-size:16px;}
+	.home__slogan .slogan p {padding:0 11%; font-size:14px;}
+	.home__dropdown .dropdown-resume .columns .info p {font-size:16px;}
+	.tab__menu ul li {font-size:20px;}
+	.tab__content--item .info h3 {font-size:20px;}
+	.tab__content--item .info p {font-size:14px;}
 }
 
 

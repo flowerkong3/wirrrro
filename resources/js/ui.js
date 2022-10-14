@@ -70,7 +70,7 @@ window.onload = function () {
 		}else {
 			rollingText[1].classList.remove('fill')
 		};
-		if(window.scrollY > 800) {
+		if(window.scrollY > 500) {
 			rollingText[2].classList.add('fill')
 		}else {
 			rollingText[2].classList.remove('fill')
