@@ -16,6 +16,7 @@ window.onload = function () {
 		sns.classList.toggle('on');
 	})
 
+			
 
 	// * Scroll | Show Hide | gotoTop 
 	$('.btn--gotoTop').hide()
@@ -28,13 +29,19 @@ window.onload = function () {
 	})
 
 
-
-
-
 	// * Scroll | Scroll Top
 	btnTop.addEventListener('click',function(){
 		event.preventDefault();
 		window.scrollTo(0,0);
+	})
+
+	window.addEventListener('scroll',function(){
+		// keyVisual | Run | header | mainTitle
+		if(window.scrollY > 50) {
+			header.classList.add('active')
+		}else {
+			header.classList.remove('active')
+		}
 	})
 
 

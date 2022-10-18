@@ -15,8 +15,14 @@ window.onload = function () {
 	const clickSectionHeight = clickSection.scrollHeight; //현재 요소의 높이
 	const rollingBar = document.querySelector('.home__bar-text');
 	const rollingText = document.querySelectorAll('.home__bar-text li')
-	const keyHeart = document.querySelector('.home .key-heart');
-	const card = document.querySelector('.card');
+	const keyHeart = document.querySelector('.key-heart');
+	const keyHeartGreen = document.querySelector('.key-heart--green');
+	// const keyHeartRed = document.querySelector('.home .key-heart--red');
+	const keyHeartRed = document.querySelectorAll('.key-heart--red');
+	const card = document.querySelectorAll('.card');
+	// const wrap = document.querySelectorAll('.wrap');
+	const front = document.querySelector('.front');
+	const back = document.querySelector('.back');
 
 	// Cursor Custom
 	// const cousor = document.querySelector('.cursor-item');
@@ -36,27 +42,73 @@ window.onload = function () {
 	// 	clickSection.style.backgroundColor = 'var(--color-main)';
 	// })
 
-		card.addEventListener('mouseover', function () {
-			keyHeart.classList.add('show');
-		})
-		card.addEventListener('mouseout', function () {
-			keyHeart.classList.remove('show');
-		})
+	// card.addEventListener('mouseover',function() {
+		
+	// 	for (i = 0; i < keyHeartRed.length; i++) {
+
+	// 			keyHeartRed[i].classList.add('rotate');
+	// 			keyHeartGreen.classList.add('rotate');
+	// 			back.style.zIndex="1";
+	// 	}
+		
+		
+	// })
+
+
+	// card.addEventListener('mouseout',function() {
+	// 	for (i = 0; i < keyHeartRed.length; i++) {
+
+	// 			keyHeartRed[i].classList.remove('rotate');
+	// 			keyHeartGreen.classList.remove('rotate');
+	// 			back.style.zIndex="3";
+	// 	}
+	// })
+	
+
+
+					
+
+		// card.addEventListener('mouseover', function () {
+		// 	keyHeartRed.classList.add('rotate');
+		// 	keyHeartGreen.classList.add('rotate');
+		// 	back.style.zIndex="3";
+		// })
+		// card.addEventListener('mouseout', function () {
+		// 	// keyHeart.classList.remove('show');
+		// 	keyHeartRed.classList.remove('rotate');
+		// 	keyHeartGreen.classList.remove('rotate');
+		// 	back.style.zIndex="1";
+		// })
 	
 	// *Scroll Down Event 
 	window.addEventListener('scroll',function(){
 		// - Click | Change Color
-		if(window.scrollY > 1700) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 DOM의 높이를 넘어설 경우- window.scrollY
+		if(window.scrollY > 2000) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 	DOM의 높이를 넘어설 경우- window.scrollY
 			clickSection.classList.add('active'); 
 		}else {
 			clickSection.classList.remove('active');
 		}
 
-		// keyVisual | Run
-		if(window.scrollY > 100) {
+		// keyVisual | Card Rotate
+		for (i = 0; i < card.length; i++) {
+			if (window.scrollY > 20) {
+				card[i].classList.add('active')
+			} else {
+				card[i].classList.remove('active')
+			};
+		}
+
+		// keyVisual | Run | header | mainTitle
+		if(window.scrollY > 50) {
 			run.classList.add('active')
+			header.classList.add('active')
+			mainTitle.classList.add('active')
+			main.classList.add('active')
 		}else {
 			run.classList.remove('active')
+			header.classList.remove('active')
+			mainTitle.classList.remove('active')
+			main.classList.remove('active')
 		}
 
 		// - Rollin Bar Text - fill
@@ -91,6 +143,17 @@ window.onload = function () {
 		// 	keyHeart.style.width = '0';
 		// 	keyHeart.style.display = 'none';
 		// }
+
+
+		for (i = 0; i < keyHeartRed.length; i++) {
+			// console.log(keyHeartRed)
+			if (window.scrollY > 100) {
+				keyHeartRed[i].classList.add('rotate')
+				
+			} else {
+				keyHeartRed[i].classList.remove('rotate')
+			};
+		}
 
 
 

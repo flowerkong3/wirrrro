@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+.frame {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #d74b4b;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+	position:relative;
+	max-width:1440px; width:100%;
+	height:60vh;
+	/* background: url(../../resources/images/bg_main.png); */
+}
+
+.center {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+	display:flex;
+	flex-wrap: wrap;
+}
+.card {margin:20px;}
+.card,
+.wrap{
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border-radius: 12px;
+  perspective: 750px;  /* 원근법 ,transform과 같이 사용 */ 
+	
+	background: #fff;
+}
+.wrap {
+  transition: 1s;  
+  transform-style: preserve-3d; /* 카드 뒤집기 핵심 */
+}
+.card:hover .wrap:nth-child(2n){
+    transform: rotateX(180deg);
+  }
+.card:hover .wrap:nth-child(2n-1){
+    transform: rotateX(180deg);
+		transition-delay: 0.5s;
+  }
+.card:hover .wrap:nth-child(3n){
+    transform: rotateX(180deg);
+		transition-delay: 1s;
+  }
+.back,
+.front {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transform-origin: 50% 0;
+  /* background: #fff; */
+  text-align: center;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+	border:3px solid #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.front {
+  z-index: 1;
+}
+.back {
+  transform: rotateX(180deg) translate(-50%,-50%);
+}
+
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	width: 1500px;
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="frame">
+		<div class="center">
+			<div class="card">
+				<div class="wrap">
+					<div class="front">
+						<img src="resources/images/icon_heartCheckRed.png" alt="">
+					</div>
+					<div class="back">
+						<img src="resources/images/icon_star.png" alt="">
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="front">
+						<img src="resources/images/icon_heartCheckRed.png" alt="">
+					</div>
+					<div class="back">
+						<img src="resources/images/icon_star.png" alt="">
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="front">
+						<img src="resources/images/icon_heartCheckRed.png" alt="">
+					</div>
+					<div class="back">
+						<img src="resources/images/icon_star.png" alt="">
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="front">
+						<img src="resources/images/icon_heartCheckRed.png" alt="">
+					</div>
+					<div class="back">
+						<img src="resources/images/icon_star.png" alt="">
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="front">
+						<img src="resources/images/icon_heartCheckRed.png" alt="">
+					</div>
+					<div class="back">
+						<img src="resources/images/icon_star.png" alt="">
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="front">
+						<img src="resources/images/icon_heartCheckRed.png" alt="">
+					</div>
+					<div class="back">
+						<img src="resources/images/icon_star.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

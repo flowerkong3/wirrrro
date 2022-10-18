@@ -30,7 +30,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-
 	<!-- JS | Common -->
 	<script type="text/javascript" defer src="./resources/js/common.js"></script>
 	<script type="text/javascript" defer src="./resources/js/ui.js"></script>
@@ -71,48 +70,45 @@
 			<main id="main" class="main">
 				<section class="home__keyVisual">
 					<div class="container">
-						<h1><i class="title-deco">🤞</i> 위로, 포트폴리오</h1>
+						<h1 id="mainTitle"><i class="title-deco">🤞</i> 위로, 포트폴리오</h1>
 
 						<!-- card rotate animation -->
 				
 						<div class="deco--run" id="run">🏃‍♀️</div>
-						<article class="frame">
+						<div class="frame">
 							<div class="center">
 								<div class="card">
-									<div class="wrap">
-										<div class="front">
-											
-											<div class="key-heart">
-												<img src="resources/images/icon_heartCheckRed.png" alt="">
-											</div>
-											<!-- <img src="resources/images/bg_main.png" alt=""> -->
-										</div>
-									
+									<div class="wrap w--01">
 										<div class="back">
-											<!-- <img src="resources/images/bg_main.png" alt=""> -->
+											<img src="resources/images/img_card_01_f.png" alt="">
+										</div>
+										<div class="front">
+											<img src="resources/images/img_card_01_b.png" alt="">
 										</div>
 									</div>
 								</div>
-							
-							</div>
-						</article>
-					
-					
-
-						<!-- <div class="card-wrap">
-							<div class="card">
-								<div class="image card--front">
-									<div class="key-heart">
-										<img src="resources/images/icon_heartCheckRed.png" alt="">
+								<div class="card">
+									<div class="wrap w--02">
+										<div class="back">
+											<img src="resources/images/img_card_02_f.png" alt="">
+										</div>
+										<div class="front">
+											<img src="resources/images/img_card_02_b.png" alt="">
+										</div>
 									</div>
 								</div>
-								<div class="image card--back">
-									<div class="key-heart">
-										<img src="resources/images/icon_heartCheckRed.png" alt="">
+								<div class="card">
+									<div class="wrap w--03">
+										<div class="back">
+											<img src="resources/images/img_card_03_f.png" alt="">
+										</div>
+										<div class="front">
+											<img src="resources/images/img_card_03_b.png" alt="">
+										</div>
 									</div>
 								</div>
 							</div>
-						</div> -->
+						</div>
 						<button class="btn btn--gotoBot" onclick="location.href='#slogan'">
 							<!-- <img src="resources/images/arrow_bottom.png" alt=""> -->
 							<img src="resources/images/icon_star.png" alt="">
@@ -130,11 +126,6 @@
 								<li class="rolling__item"><small>#</small>wirrrro</li>
 								<li class="rolling__item"><small>#</small>protfolio</li>
 								<li class="rolling__item"><small>#</small>web publisher</li>
-								<!-- <li class="rolling__item"><small>#</small>wirrrro</li>
-								<li class="rolling__item"><small>#</small>wirrrro</li>
-								<li class="rolling__item"><small>#</small>wirrrro</li>
-								<li class="rolling__item"><small>#</small>wirrrro</li>
-								<li class="rolling__item"><small>#</small>wirrrro</li> -->
 							</ul>
 						</div>
 					</div>
@@ -144,12 +135,12 @@
 					<div class="container">
 							<div class="slogan">
 								<ul class="flex">
-									<li>위로하고</li>
-									<li>위로받고</li>
+									<li>위로하고</li><br>
+									<li>위로받고</li><br>
 									<li>위로가자</li>
 								</ul>
 								<p>
-									🍀 위로하고, 위로받으며, 위로 성장하는 웹퍼블리셔 김민영입니다. 
+									<i class="text--rotate">🍀</i> 위로하고, 위로받으며, 위로 성장하는 웹퍼블리셔 김민영입니다. 
 								</p>
 							</div>
 					</div>
@@ -162,9 +153,24 @@
 								<p>2021년 ~ 2022년 까지의 포트폴리오 입니다.</p>
 							</div>
 							<div class="list">
+				
+							
 								<ul class="flex">
 									<li>
+										<div class="card">
+											<div class="wrap">
+												<div class="front">
+													<div class="key-heart key-heart--red">
+														<img src="resources/images/icon_heartCheckRed.png" alt="">
+													</div>
+												</div>
+												<div class="back">
+													<div class="key-heart key-heart--green"><img src="resources/images/icon_heartCheckGreen.png" alt=""></div>
+												</div>
+											</div>
+										</div>
 										<a href="pages_portfolio_ooc.html">
+											
 											<div class="list__thumb">
 												<img src="resources/images/img_portfolio_01.png" alt="portfolio_ooc">
 											</div>
@@ -173,7 +179,21 @@
 											</div>
 										</a>
 									</li>
+
 									<li>
+										<div class="card">
+											<div class="wrap">
+												<div class="front">
+													<div class="key-heart key-heart--red">
+														<img src="resources/images/icon_heartCheckRed.png" alt="">
+													</div>
+												</div>
+												<div class="back">
+													<div class="key-heart key-heart--green"><img src="resources/images/icon_heartCheckGreen.png" alt=""></div>
+												</div>
+											</div>
+										</div>
+
 										<a href="pages_portfolio_inni.html">
 											<div class="list__thumb">
 												<img src="resources/images/img_portfolio_02.png" alt="portfolio_inni">
@@ -183,7 +203,20 @@
 											</div>
 										</a>
 									</li>
+
 									<li>
+										<div class="card">
+											<div class="wrap">
+												<div class="front">
+													<div class="key-heart key-heart--red">
+														<img src="resources/images/icon_heartCheckRed.png" alt="">
+													</div>
+												</div>
+												<div class="back">
+													<div class="key-heart key-heart--green"><img src="resources/images/icon_heartCheckGreen.png" alt=""></div>
+												</div>
+											</div>
+										</div>
 										<a href="pages_portfolio_yourname.html">
 											<div class="list__thumb">
 												<img src="resources/images/img_portfolio_03.gif" alt="portfolio_yourname">
@@ -240,7 +273,7 @@
 									감사합니다.
 								</p>
 							</div>
-							<!-- <div class="heart"><img src="resources/images/icon_heart.png" alt=""></div> -->
+							<div class="heart"><img src="resources/images/icon_heart.png" alt=""></div>
 							<div class="btn--close"><button onclick="btnClose()"><img src="resources/images/btn_close_b.png" alt=""></button></div>
 						</div>
 					</div>
