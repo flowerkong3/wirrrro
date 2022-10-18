@@ -164,18 +164,7 @@ h1 .title-deco::before {
 .home__keyVisual .card:hover .wrap{
 		transform: rotateX(180deg);
 	}
-/* .card:hover .wrap:nth-child(1n){
-		transform: rotateX(180deg);
-		transition-delay: 0.1s;
-	}
-.card:hover .wrap:nth-child(2n){
-    transform: rotateX(180deg);
-		transition-delay: 0.3s;
-  }
-.card:hover .wrap:nth-child(3n){
-    transform: rotateX(180deg);
-		transition-delay: 0.5s;
-  } */
+
 .home__keyVisual .back,
 .home__keyVisual .front {
   position: absolute;
@@ -472,6 +461,7 @@ h1 .title-deco::before {
 	/* .home__keyVisual .frame {height:50vh;} */
 	.home__keyVisual .card {position:absolute;}
 	.home__keyVisual .image {background-position-x: -190px; height:400px;}
+	.home__keyVisual .card:hover {transform: translateY(0);}
 
 	.home__slogan .slogan ul li::before {width:2px;}
 	.home__portfolio {background-size: 200%;}
@@ -537,7 +527,7 @@ h1 .title-deco::before {
 	#header nav .gnb li:not(:first-child) {margin-top:11px;}
 	#header nav .gnb li a {
 		font-family: var(--font-regular);
-		font-size: 24px;
+		font-size: 20px;
 		padding:0;
 	}
 	#header nav .nav__right {
@@ -551,7 +541,7 @@ h1 .title-deco::before {
 	.hamburger.on span:nth-child(1) {transform: rotate(45deg); top: 10px;}
 	.hamburger.on span:nth-child(2) {display:none;}
 	.hamburger.on span:nth-child(3) {transform: rotate(-45deg); top: 10px;}
-	#header nav.on {height:40vh;}
+	#header nav.on {height:60vh;}
 	#header nav .gnb.on {display:block;}
 	#header nav .nav__right.on {display:block;}
 
@@ -569,7 +559,8 @@ h1 .title-deco::before {
 }
 	.btn--gotoBot {bottom: -50px; left: 80%; max-width: 54px;}
 
-	.title p {font-size:16px;}
+	.title h2 {font-size:28px;}
+	.title p {font-size:14px;}
 	.home__slogan .slogan p {padding:0 11%; font-size:14px;}
 	.home__dropdown .dropdown-resume .columns .info p {font-size:16px;}
 	.tab__menu ul li {font-size:20px;}
