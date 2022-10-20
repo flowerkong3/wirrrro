@@ -247,7 +247,7 @@ h1 .title-deco::before {
 .home__goodList .list {max-width: 1200px; width:100%; margin:5rem auto 0; font-size: var(--font-small);}
 .home__goodList .list li {position:relative; margin-top:10px; padding:20px; border:1px solid var(--color-black); cursor:pointer; transition: all 0.1s;}
 .home__goodList .list li:nth-child(1) {margin-top:0;}
-.home__goodList .list li .list__title {display:block; padding:0; font-weight:bold; font-size: 2rem;}
+.home__goodList .list li .list__title {display:block; padding:0; font-weight:bold; color: var(--color-black); font-size: 2rem;}
 .home__goodList .list li .list__desc {display:none; margin-top:10px; padding-right:30px; font-size:1.6rem;}
 .home__goodList .list li::before,
 .home__goodList .list li::after {
