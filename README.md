@@ -17,5 +17,4 @@
 <br>
 
 **WP_Update1.3 [2022-10-20]**
-
 - [x]  home | goodList 섹션 추가
