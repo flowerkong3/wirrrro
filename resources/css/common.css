@@ -4,7 +4,7 @@
 	/* Color */
 	--color-main:#3CD400;
 	--color-red:#FD6756;
-	--color-black:#111;
+	--color-black:#121212;
 	--color-gray:#7B7B7B;
 	--color-gray--light:#BBBBBB;
 	--color-beige:#F5F1EF;
@@ -27,9 +27,9 @@
 	--stroke-large:5px;
 	--stroke-medium:3px;
 	--stroke-small:2px;
-	--border-large:0.5rem solid #000;
-	--border-medium:3px solid #000;
-	--border-small:2px solid #000;
+	--border-large:0.5rem solid #1E1E1E;
+	--border-medium:3px solid #1E1E1E;
+	--border-small:2px solid #1E1E1E;
 
 	--radius:1vw;
 }
@@ -84,6 +84,7 @@ h5,
 h6 {
 	font-family:'Montserrat-Regular','dotum','돋움',Arial, Helvetica, sans-serif;
 	margin:0; padding:0;
+	
 }
 p {margin:0; padding:0;}
 a {text-decoration: none; color:var(--color-black)}

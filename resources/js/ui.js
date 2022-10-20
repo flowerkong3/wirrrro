@@ -352,11 +352,18 @@ window.onload = function () {
 		});
 	}
 
+	// * 아코디언 메뉴
+	// home__goodList | 
+	var $list = $('.home__goodList .list li')
+	var $listTitle = $('.home__goodList .list__title')
+	var $listDesc = $('.home__goodList .list__desc')
 
-	// function mouseFunc(e){
-	// 	body.innerHTML = 'x: ' + e.clientX + 'y:' + e.clientY;
-	// }
 
-	// cursorItem.style.transform = "translate( "+e.clientX + "px," + c.clientY + "px)"
+	$list.click(function(){
+		// $listDesc.css('display','block');
+		// $list.removeClass('active');
+		$(this).toggleClass('active');
+	})
+
 
 }
