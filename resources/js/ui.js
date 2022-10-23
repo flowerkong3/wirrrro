@@ -83,7 +83,7 @@ window.onload = function () {
 	// *Scroll Down Event 
 	window.addEventListener('scroll',function(){
 		// - Click | Change Color
-		if(window.scrollY > 2000) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 	DOM의 높이를 넘어설 경우- window.scrollY
+		if(window.scrollY > 2400 + 2000) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 	DOM의 높이를 넘어설 경우- window.scrollY
 			clickSection.classList.add('active'); 
 		}else {
 			clickSection.classList.remove('active');
@@ -103,26 +103,39 @@ window.onload = function () {
 			run.classList.add('active')
 			header.classList.add('active')
 			mainTitle.classList.add('active')
-			main.classList.add('active')
+			
+			// keyVisual.classList.add('active')
+			
 		}else {
 			run.classList.remove('active')
 			header.classList.remove('active')
 			mainTitle.classList.remove('active')
-			main.classList.remove('active')
+			// keyVisual.classList.remove('active')
 		}
 
+		if(window.scrollY > 2000) {
+			// keyVisual.classList.remove('active')
+			keyVisual.classList.add('active')
+			main.classList.add('active')
+		}else {
+			keyVisual.classList.remove('active')
+		}
+
+
+
+
 		// - Rollin Bar Text - fill
-		if(window.scrollY > 300) {
+		if(window.scrollY > 300 + 2000) {
 			rollingText[0].classList.add('fill')
 		}else {
 			rollingText[0].classList.remove('fill')
 		};
-		if(window.scrollY > 400) {
+		if(window.scrollY > 400 + 2000) {
 			rollingText[1].classList.add('fill')
 		}else {
 			rollingText[1].classList.remove('fill')
 		};
-		if(window.scrollY > 500) {
+		if(window.scrollY > 500 + 2000) {
 			rollingText[2].classList.add('fill')
 		}else {
 			rollingText[2].classList.remove('fill')
@@ -355,7 +368,7 @@ window.onload = function () {
 	// * 아코디언 메뉴
 	// home__goodList | 
 	var $list = $('.home__goodList .list li')
-	var $listTitle = $('.home__goodList .list__title')
+	var $listBtn = $('.home__goodList .list__btn')
 	var $listDesc = $('.home__goodList .list__desc')
 
 
@@ -365,5 +378,9 @@ window.onload = function () {
 		$(this).toggleClass('active');
 	})
 
+
+	for(i=0; i<10; i++){
+		$('.home__skills .flex li').append("<img src = ' photo " + i + ".png '>");
+	}
 
 }
