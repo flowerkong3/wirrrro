@@ -35,8 +35,9 @@ window.onload = function () {
 		window.scrollTo(0,0);
 	})
 
+	// *Scroll Down Event | show , hide 
 	window.addEventListener('scroll',function(){
-		// keyVisual | Run | header | mainTitle
+		// header 
 		if(window.scrollY > 50) {
 			header.classList.add('active')
 		}else {

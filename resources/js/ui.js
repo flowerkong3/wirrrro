@@ -12,78 +12,32 @@ window.onload = function () {
 	const likeHeart = document.querySelector('.like i');
 	const likeNumber = document.querySelector('.num')
 	const clickSection = document.querySelector('.home__click');
-	const clickSectionHeight = clickSection.scrollHeight; //현재 요소의 높이
+	const clickSectionHeight = clickSection.scrollTop; //현재 요소의 높이
 	const rollingBar = document.querySelector('.home__bar-text');
 	const rollingText = document.querySelectorAll('.home__bar-text li')
-	const keyHeart = document.querySelector('.key-heart');
-	const keyHeartGreen = document.querySelector('.key-heart--green');
-	// const keyHeartRed = document.querySelector('.home .key-heart--red');
-	const keyHeartRed = document.querySelectorAll('.key-heart--red');
 	const card = document.querySelectorAll('.card');
-	// const wrap = document.querySelectorAll('.wrap');
 	const front = document.querySelector('.front');
 	const back = document.querySelector('.back');
 
-	// Cursor Custom
-	// const cousor = document.querySelector('.cursor-item');
+	const STANDARD = 2000;
 
-  //   const animateCursor = (e) => {
-  //       cousor.style.left = `${e.pageX}px`;
-  //       cousor.style.top = `${e.pageY}px`;
-  //   }
-  //   window.addEventListener('mousemove', animateCursor);
+	// 문서의 처음부터 마지막까지의 높이값
+	const totalHeight = document.documentElement.scrollHeight;
 
-	// *Mouseover Event
-	// - Click | Change Color
-	// clickSection.addEventListener('mouseover',function(){
-	// 	clickSection.style.backgroundColor = '#61FF00';
-	// })
-	// clickSection.addEventListener('mouseout',function(){
-	// 	clickSection.style.backgroundColor = 'var(--color-main)';
-	// })
+	//문서의 보이는 부분, 즉 뷰포트 높이 (보더, 마진 빼고 전부다)
+	const viewportHeight = document.documentElement.clientHeight;
+			// -> 위와 동일함 const viewportHeight = window.innerHeight;
 
-	// card.addEventListener('mouseover',function() {
-		
-	// 	for (i = 0; i < keyHeartRed.length; i++) {
-
-	// 			keyHeartRed[i].classList.add('rotate');
-	// 			keyHeartGreen.classList.add('rotate');
-	// 			back.style.zIndex="1";
-	// 	}
-		
-		
-	// })
+	//문서의 최상단부터 내려온 만큼의 높이
+	const scrollHeightFromTop = window.scrollY;
 
 
-	// card.addEventListener('mouseout',function() {
-	// 	for (i = 0; i < keyHeartRed.length; i++) {
-
-	// 			keyHeartRed[i].classList.remove('rotate');
-	// 			keyHeartGreen.classList.remove('rotate');
-	// 			back.style.zIndex="3";
-	// 	}
-	// })
-	
-
-
-					
-
-		// card.addEventListener('mouseover', function () {
-		// 	keyHeartRed.classList.add('rotate');
-		// 	keyHeartGreen.classList.add('rotate');
-		// 	back.style.zIndex="3";
-		// })
-		// card.addEventListener('mouseout', function () {
-		// 	// keyHeart.classList.remove('show');
-		// 	keyHeartRed.classList.remove('rotate');
-		// 	keyHeartGreen.classList.remove('rotate');
-		// 	back.style.zIndex="1";
-		// })
 	
 	// *Scroll Down Event 
 	window.addEventListener('scroll',function(){
 		// - Click | Change Color
-		if(window.scrollY > 2400 + 2000) { //window에 scroll 이벤트를 더한 후, window의 scroll 위치가 	DOM의 높이를 넘어설 경우- window.scrollY
+		// window에 scroll 이벤트를 더한 후, window의 scroll 위치가 DOM의 높이를 넘어설 경우- window.scrollY
+		if(window.scrollY > 2400 + STANDARD) { 
 			clickSection.classList.add('active'); 
 		}else {
 			clickSection.classList.remove('active');
@@ -104,17 +58,13 @@ window.onload = function () {
 			header.classList.add('active')
 			mainTitle.classList.add('active')
 			
-			// keyVisual.classList.add('active')
-			
 		}else {
 			run.classList.remove('active')
 			header.classList.remove('active')
 			mainTitle.classList.remove('active')
-			// keyVisual.classList.remove('active')
 		}
 
 		if(window.scrollY > 2000) {
-			// keyVisual.classList.remove('active')
 			keyVisual.classList.add('active')
 			main.classList.add('active')
 		}else {
@@ -122,57 +72,25 @@ window.onload = function () {
 		}
 
 
-
-
 		// - Rollin Bar Text - fill
-		if(window.scrollY > 300 + 2000) {
+		if(window.scrollY > 300 + STANDARD) {
 			rollingText[0].classList.add('fill')
 		}else {
 			rollingText[0].classList.remove('fill')
 		};
-		if(window.scrollY > 400 + 2000) {
+		if(window.scrollY > 400 + STANDARD) {
 			rollingText[1].classList.add('fill')
 		}else {
 			rollingText[1].classList.remove('fill')
 		};
-		if(window.scrollY > 500 + 2000) {
+		if(window.scrollY > 500 + STANDARD) {
 			rollingText[2].classList.add('fill')
 		}else {
 			rollingText[2].classList.remove('fill')
 		};
-				// for(i=0; i<rollingText.length; i++){
-		// 	if(window.scrollY > 400) {
-		// 		rollingText[i].classList.add('fill')
-		// 	}else {
-		// 		rollingText[i].classList.remove('fill')
-		// 	};
-		// }
-
-		// keyVisual | Heart animation 
-		// if(window.scrollY > 30) {
-		// 	keyHeart.style.width = '115px';
-		// 	keyHeart.style.display = 'block';
-		// }else {
-		// 	keyHeart.style.width = '0';
-		// 	keyHeart.style.display = 'none';
-		// }
-
-
-		for (i = 0; i < keyHeartRed.length; i++) {
-			// console.log(keyHeartRed)
-			if (window.scrollY > 100) {
-				keyHeartRed[i].classList.add('rotate')
-				
-			} else {
-				keyHeartRed[i].classList.remove('rotate')
-			};
-		}
-
 
 
 	})
-
-
 
 
 
@@ -209,47 +127,36 @@ window.onload = function () {
 
 
 	// * Scroll to location
-	//  gotoBottm
+	//  gotoBottom
 	$('.btn--gotoBot').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const mainOffset = $('#slogan').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:mainOffset.top - 80 },50 )
 	})
-	// Scroll to location | portfolio
+	// portfolio
 	$('.portfolio').click(function(){
-		event.preventDefault(); //기본 클릭 동작 방지하기
-		const portfolioOffset = $('#portfolio').offset() //main의 위치값 변수에 담기
+		event.preventDefault(); 
+		const portfolioOffset = $('#portfolio').offset() 
 		$('html, body').animate( { scrollTop:portfolioOffset.top - 80 },50 )
 	})
-	// Scroll to location | photo
+	// photo
 	$('.photo').click(function(){
-		event.preventDefault(); //기본 클릭 동작 방지하기
-		const photoOffset = $('#photo').offset() //main의 위치값 변수에 담기
+		event.preventDefault(); 
+		const photoOffset = $('#photo').offset() 
 		$('html, body').animate( { scrollTop:photoOffset.top - 80 },50 )
 	})
-	// Scroll to location | review
+	// review
 	$('.review').click(function(){
-		event.preventDefault(); //기본 클릭 동작 방지하기
-		const reviewOffset = $('#review').offset() //main의 위치값 변수에 담기
+		event.preventDefault(); 
+		const reviewOffset = $('#review').offset() 
 		$('html, body').animate( { scrollTop:reviewOffset.top - 80 },50 )
 	})
 
 	
 	// * Click Event 
-	// DropDownResume | Show Hide  
 	resume.addEventListener('click', function () {
 		dropdownResume.classList.toggle('show');
 		titleChange.classList.toggle('on');
-		// if(titleChange.innerText === '+ click +'){
-		// 	titleChange.innerText = ' - close - ';
-		// }else {
-		// 	titleChange.innerText = '- click - ';
-		// }
-		// if(dropdown.style.display=='none'){
-		// 	dropdown.style.display='block';
-		// }else {
-		// 	dropdown.style.display='none';
-		// }
 		dropdown.classList.toggle('on');
 	})
 	
@@ -286,7 +193,6 @@ window.onload = function () {
 	// * Photo | 좋아요 누르면 하트 컬러 변경
 	$('.like button').click(function(){
 		var $this = $('.heart');
-		// $('.heart').removeClass('on');
 		$($this).addClass('on');
 	})
 
@@ -331,9 +237,7 @@ window.onload = function () {
 						dots: true
 					}
 				}
-				// You can unslick at a given breakpoint now by adding:
-				// settings: "unslick"
-				// instead of a settings object
+
 			]
 		});
 			
@@ -341,7 +245,7 @@ window.onload = function () {
 
 
 	// * Tab Event
-	// home__review | 출처:https://abcdqbbq.tistory.com/88
+	// home__review 
 	const tabList = document.querySelectorAll('.tab__menu--item');
 	const contents = document.querySelectorAll('.tab__content--item');
 	let activeCont = ''; //현재 활성화 된 컨텐츠
@@ -352,7 +256,7 @@ window.onload = function () {
 		tabList[i].querySelector('.btn').addEventListener('click',function(e){
 			e.preventDefault();
 			for(var j=0; j<tabList.length; j++){
-				//나머지 버튼 클래서 제거
+				//나머지 버튼 클래스 제거
 				tabList[j].classList.remove('on');
 				//나머지 컨텐츠 display:none 처리
 				contents[j].style.display = 'none';
@@ -366,21 +270,18 @@ window.onload = function () {
 	}
 
 	// * 아코디언 메뉴
-	// home__goodList | 
+	// home__goodList 
 	var $list = $('.home__goodList .list li')
 	var $listBtn = $('.home__goodList .list__btn')
 	var $listDesc = $('.home__goodList .list__desc')
 
 
 	$list.click(function(){
-		// $listDesc.css('display','block');
-		// $list.removeClass('active');
+		// $list.removeClass('active'); 해당 메뉴 제외하고 나머지 메뉴 닫히게
 		$(this).toggleClass('active');
 	})
 
 
-	for(i=0; i<10; i++){
-		$('.home__skills .flex li').append("<img src = ' photo " + i + ".png '>");
-	}
+
 
 }
