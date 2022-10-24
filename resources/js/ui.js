@@ -4,11 +4,11 @@ window.onload = function () {
 	const titleChange = document.querySelector('.title--change');
 	const btnClose = document.querySelector('.btn--close');
 	const dropdown = document.querySelector('.home__dropdown');
-	const btnTop = document.querySelector('.btn--gotoTop');
+	const btnTop = document.querySelector('.btn--go-to-top');
 	const hamburger = document.querySelector('.hamburger');
 	const nav = document.querySelector('.nav');
 	const gnb = document.querySelector('.gnb');
-	const sns = document.querySelector('.nav__right');
+	const sns = document.querySelector('.nav__sns');
 	const likeHeart = document.querySelector('.like i');
 	const likeNumber = document.querySelector('.num')
 	const clickSection = document.querySelector('.home__click');
@@ -104,7 +104,7 @@ window.onload = function () {
 	})
 
 	 // Scroll | Scroll Bottom
-  // $('.btn--gotoBot').click(function(e){
+  // $('.btn--go-to-bot').click(function(e){
   //   $.scrollTo(this.hash || 0, 800);
   //   e.preventDefalut();
   // });
@@ -116,19 +116,19 @@ window.onload = function () {
 	})
 
 	// * Scroll | gotoTop | show hide
-	$('.btn--gotoTop').hide()
+	$('.btn--go-to-top').hide()
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 200){
-			$('.btn--gotoTop').show()
+			$('.btn--go-to-top').show()
 		}else {
-			$('.btn--gotoTop').hide();
+			$('.btn--go-to-top').hide();
 		}
 	})
 
 
 	// * Scroll to location
 	//  gotoBottom
-	$('.btn--gotoBot').click(function(){
+	$('.btn--go-to-bot').click(function(){
 		event.preventDefault(); //기본 클릭 동작 방지하기
 		const mainOffset = $('#slogan').offset() //main의 위치값 변수에 담기
 		$('html, body').animate( { scrollTop:mainOffset.top - 80 },50 )
@@ -246,8 +246,8 @@ window.onload = function () {
 
 	// * Tab Event
 	// home__review 
-	const tabList = document.querySelectorAll('.tab__menu--item');
-	const contents = document.querySelectorAll('.tab__content--item');
+	const tabList = document.querySelectorAll('.tab-menu__item');
+	const contents = document.querySelectorAll('.tab-content__item');
 	let activeCont = ''; //현재 활성화 된 컨텐츠
 	const tab01 = document.getElementById('tab--01')
 	tab01.style.display='block'

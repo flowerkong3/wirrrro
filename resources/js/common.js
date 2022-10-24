@@ -1,10 +1,10 @@
 window.onload = function () {
 
-	const btnTop = document.querySelector('.btn--gotoTop');
+	const btnTop = document.querySelector('.btn--go-to-top');
 	const hamburger = document.querySelector('.hamburger');
 	const nav = document.querySelector('.nav');
 	const gnb = document.querySelector('.gnb');
-	const sns = document.querySelector('.nav__right');
+	const sns = document.querySelector('.nav__sns');
 
 
 
@@ -19,12 +19,12 @@ window.onload = function () {
 			
 
 	// * Scroll | Show Hide | gotoTop 
-	$('.btn--gotoTop').hide()
+	$('.btn--go-to-top').hide()
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 200){
-			$('.btn--gotoTop').show()
+			$('.btn--go-to-top').show()
 		}else {
-			$('.btn--gotoTop').hide();
+			$('.btn--go-to-top').hide();
 		}
 	})
 
