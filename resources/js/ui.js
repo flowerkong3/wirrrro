@@ -279,6 +279,8 @@ window.onload = function () {
 	$($listBtn).click(function(){
 		$(this).next('.list__desc').stop().slideToggle(300);
 		$(this).parent().siblings().children('.list__desc').slideUp(300);
+		$listBtn.removeClass('on');
+		$(this).toggleClass('on');
 	})
 
 
