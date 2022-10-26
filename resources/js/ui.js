@@ -276,10 +276,22 @@ window.onload = function () {
 	var $listDesc = $('.home__goodList .list__desc')
 
 
+	$($listBtn).click(function(){
+		$(this).next('.list__desc').stop().slideToggle(300);
+		$(this).parent().siblings().children('.list__desc').slideUp(300);
+	})
+
+
 	$list.click(function(){
 		// $list.removeClass('active'); 해당 메뉴 제외하고 나머지 메뉴 닫히게
-		$(this).toggleClass('active');
+		// $(this).toggleClass('active');
+		// $(this).next().stop().slideToggle(300);
+		// $(this).parent().siblings().children($listDesc).slideUp()
+		
+
 	})
+
+
 
 
 

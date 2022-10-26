@@ -111,7 +111,7 @@ h1 .deco--hand::before {
 #main {border-top: 3px solid #111;}
 #main.active {position:relative; background: #fff;z-index:200;  margin-top: 3000px;}
 .home__keyvisual .container {position:relative;}
-.home__keyvisual h1 {margin:0 0 2rem; font-size:2.8rem; font-family: 'Montserrat-Bold'; text-align: center;}
+.home__keyvisual h1 {display:none; margin:0 0 2rem; font-size:2.8rem; font-family: 'Montserrat-Bold'; text-align: center;}
 
 
 /* Card Rotate */
@@ -236,10 +236,10 @@ h1 .deco--hand::before {
 .home__goodList {font-family: var(--font-regular--kr);}
 .home__goodList .title h2 {font-family: var(--font-regular--kr);}
 .home__goodList .list {max-width: 1200px; width:100%; margin:5rem auto 0; font-size: var(--font-small);}
-.home__goodList .list li {position:relative; margin-top:10px; padding:20px; border:1px solid var(--color-black); cursor:pointer; transition: all 0.1s;}
+.home__goodList .list li {position:relative; margin-top:10px; border:1px solid var(--color-black); cursor:pointer; transition: all 0.3s;}
 .home__goodList .list li:nth-child(1) {margin-top:0;}
-.home__goodList .list li .list__btn {display:block; padding:0; font-weight:bold; color: var(--color-black); font-size: 2rem;}
-.home__goodList .list li .list__desc {display:none; margin-top:10px; padding-right:30px; font-size:1.6rem;}
+.home__goodList .list li .list__btn {display:block; width:100%; padding:20px; font-weight:bold; color: var(--color-black); text-align:left; font-size: 2rem;}
+.home__goodList .list li .list__desc {display:none; padding:0 30px 20px 20px; font-size:1.6rem; }
 .home__goodList .list li::before,
 .home__goodList .list li::after {
 	content:''; position: absolute; right: 20px; top: 20px; background-size: 100%; width:2rem; height:2rem;
@@ -249,11 +249,13 @@ h1 .deco--hand::before {
 .home__goodList .list li:hover {background: var(--color-black); color: var(--color-white);}
 .home__goodList .list li:hover .list__btn {color: var(--color-white);}
 .home__goodList .list li:hover::before {background-image: url(../../resources/images/icon_plus_w.png)}
-.home__goodList .list li.active {background: var(--color-black); color: var(--color-white);}
+/* .home__goodList .list li.active {background: var(--color-black); color: var(--color-white);}
 .home__goodList .list li.active .list__btn {color: var(--color-white);}
-.home__goodList .list li.active .list__desc{display:block; }
+.home__goodList .list li.active .list__desc{} */
 .home__goodList .list li.active::before {display:none;}
 .home__goodList .list li.active::after {display:block;}
+
+
 
 
 /*  ! +++++++++++++ section | home__portfolio +++++++++++++  */
