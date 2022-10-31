@@ -23,3 +23,5 @@
 - [x]  home | keyVisual 휠 내리면 잠시 고정후 멈춘후 애니메이션 실행
 - [x]  home | click 스크롤내리면 슥 나타나는 강아지 그림 (제가 더 궁금한가요? )
 - [x]  footer | hover하면 애니메이션 멈춤
+
+test3
