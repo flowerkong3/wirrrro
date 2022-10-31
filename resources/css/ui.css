@@ -241,22 +241,9 @@ h1 .deco--hand::before {
 .home__goodList .list__btn {display:block; position: relative; width:100%; padding:20px; font-weight:bold; color: var(--color-black); text-align:left; font-size: 2rem;}
 .home__goodList .list__desc {display:none; padding:0 30px 20px 20px; font-size:1.6rem; }
 .home__goodList .list__btn::before {display:block; content:'+'; position: absolute; right: 20px; top: 20px; background-size: 100%; width:2rem; height:2rem;}
-.home__goodList .list__btn::after {display:none; content:'-'; position: absolute; right: 20px; top: 20px; background-size: 100%; width:2rem; height:2rem;}
-.home__goodList .list__btn.on::before {display:none;}
-.home__goodList .list__btn.on::after {display:block;}
-/* .home__goodList .list__btn::after {content:''; position: absolute; right: 20px; top: 20px; background-size: 100%; width:2rem; height:2rem;} */
-	
-/* 
-.home__goodList .list li::before {background-image: url(../../resources/images/icon_plus.png)}
-.home__goodList .list li::after {display:none; background-image: url(../../resources/images/icon_minus_w.png)} */
-.home__goodList .list li:hover {background: var(--color-black); color: var(--color-white);}
+.home__goodList .list__btn.on::before {content: '-';}
+.home__goodList .list li:hover {background: var(--color-black); color: var(--color-white);  }
 .home__goodList .list li:hover .list__btn {background: var(--color-black); color: var(--color-white);}
-/* .home__goodList .list li:hover::before {background-image: url(../../resources/images/icon_plus_w.png)} */
-/* .home__goodList .list li.active {background: var(--color-black); color: var(--color-white);}
-.home__goodList .list li.active .list__btn {color: var(--color-white);}
-.home__goodList .list li.active .list__desc{} */
-/* .home__goodList .list li.active::before {display:none;} */
-/* .home__goodList .list li.active::after {display:block;} */
 
 
 
